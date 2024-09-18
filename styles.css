@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #001f3f; /* Dark blue background */
+    color: white; /* White text */
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.mode-selection {
+    margin-bottom: 20px;
+}
+
+.mode-button {
+    background-color: #fff; /* White background for buttons */
+    color: #001f3f; /* Dark blue text */
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px; /* Padding for larger buttons */
+    font-size: 1.5em; /* Larger font size */
+    cursor: pointer;
+    margin: 10px; /* Space between buttons */
+}
+
+.mode-button:hover {
+    background-color: #e0e0e0; /* Light gray on hover */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+#restart-btn {
+    margin-top: 20px;
+}
+
+#status {
+    margin-top: 10px;
+}
+
+/* Popup styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+
+   /* Flexbox to center content */
+   display: flex; 
+   justify-content: center; 
+   align-items: center; 
+}
+
+.popup-content {
+   background-color: #001f3f; /* Dark blue background for popup */
+   padding: 20px; /* Padding for a compact look */
+   border-radius: 15px; /* More rounded corners */
+   width: 300px; /* Fixed width for compactness */
+   text-align: center; /* Center text inside popup */
+}
+
+.close-btn {
+   color: white;
+   float: right;
+   font-size: 28px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+   color: #f44336; /* Red color on hover/focus */
+   text-decoration: none;
+   cursor: pointer;
+}
+
+/* Set X and O colors to black */
+.cell.X {
+   color: black; /* Black color for X */
+}
+
+.cell.O {
+   color: black; /* Black color for O */
+}
